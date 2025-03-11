@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+    <script>
+        // let ans=0;
+        function Sup() {
+
+        }
+        function cos(x) {
+            return Math.cos(x)
+        }
+        function sin(x) {
+            return Math.sin(x)
+        }
+        function tan(x) {
+            return Math.tan(x)
+        }
+
+        function acos(x) {
+            return Math.acos(x);
+        }
+        function asin(x) {
+            return Math.asin(x);
+        }
+        function atan(x) {
+            return Math.atan(x);
+        }
+        function exp(x) {
+            return Math.exp(x)
+        }
+        function sqrt(X) {
+            return Math.sqrt(X)
+        }
+        function ln(x) {
+            return Math.log(x)
+        }
+        function factorielle(x) {
+            if (x == 0 || x == 1) {
+                return 1;
+            }                                 //utilisation function javascript error ici
+            let fact = 1;
+            for (let i = 2; i <= x; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="calc">
+
+        <form name="calc">
+            <input name="textview" type="textview" class="screen">
+        </form>
+        <table>
+            <caption> $$$∆∆ <es> Alien</es> ∆∆$$$
+
+            </caption>
+
+
+            <tr>
+
+                <td><button><input type="button" class="bn" value="CL"
+                            onclick="document.calc.textview.value=''"></button></td>
+                <td><button><input type="button" class="bn" value="Sup"
+                            onclick="document.calc.textview.value=document.calc.textview.value.toString().slice(0,-1);">
+                </td>
+                <td><button><input type="button" class="bn" value="Rac" onclick="document.calc.textview.value+='sqrt('">
+                </td>
+                <td><button><input type="button" class="bn" value="/" onclick="document.calc.textview.value+='/'"></td>
+            </tr>
+            <tr>
+                <td><button><input type="button" class="bn" value="7" onclick="document.calc.textview.value+='7'"></td>
+                <td><button><input type="button" class="bn" value="8" onclick="document.calc.textview.value+='8'"></td>
+                <td><button><input type="button" class="bn" value="9" onclick="document.calc.textview.value+='9'"></td>
+                <td><button><input type="button" class="bn" value="*\**" onclick="document.calc.textview.value+='*'">
+                </td>
+            </tr>
+            <tr>
+                <td><button><input type="button" class="bn" value="4" onclick="document.calc.textview.value+='4'"></td>
+                <td><button><input type="button" class="bn" value="5" onclick="document.calc.textview.value+='5'"></td>
+                <td><button><input type="button" class="bn" value="6" onclick="document.calc.textview.value+='6'"></td>
+                <td><button><input type="button" class="bn" value="+" onclick="document.calc.textview.value+='+'"></td>
+            </tr>
+            <tr>
+                <td><button><input type="button" class="bn" value="1" onclick="document.calc.textview.value+='1'"></td>
+                <td><button><input type="button" class="bn" value="2" onclick="document.calc.textview.value+='2'"></td>
+                <td><button><input type="button" class="bn" value="3" onclick="document.calc.textview.value+='3'"></td>
+                <td><button><input type="button" class="bn" value="-" onclick="document.calc.textview.value+='-'"></td>
+
+            <tr>
+                <td><button><input type="button" class="bn" value="0"
+                            onclick="document.calc.textview.value+='0'"></button></td>
+                <td><button><input type="button" class="bn" value="."
+                            onclick="document.calc.textview.value+='.'"></button></td>
+                <td><button><input type="button" class="bn" value="log"
+                            onclick="document.calc.textview.value+='ln('"></button></td>
+                <td><button><input type="button" class="bn" value="%"
+                            onclick="document.calc.textview.value=(document.calc.textview.value)/100"></button></td>
+            </tr>
+            <tr>
+                <td><button><input type="button" class="bn" value="cos"
+                            onclick="document.calc.textview.value+='cos('"></button></td>
+                <td><button><input type="button" class="bn" value="sin"
+                            onclick="document.calc.textview.value+='sin('"></button></td>
+                <td><button><input type="button" class="bn" value="tan"
+                            onclick="document.calc.textview.value+='tan('"></button></td>
+                <td><button><input type="button" class="bn" value="!"
+                            onclick="document.calc.textview.value+='factorielle('"></button></td>
+            </tr>
+            <tr>
+                <td><button><input type="button" class="bn" value="cos^-1"
+                            onclick="document.calc.textview.value+='acos('"></button></td>
+                <td><button><input type="button" class="bn" value="sin^-1"
+                            onclick="document.calc.textview.value+='asin('"></button></td>
+                <td><button><input type="button" class="bn" value="tan^-1"
+                            onclick="document.calc.textview.value+='atan('"></button></td>
+                <td><button><input type="button" class="bn" value="e"
+                            onclick="document.calc.textview.value+='exp('"></button></td>
+            </tr>
+            <tr>
+                <td><button>
+                        <input type="button" class="bn" value="Ans" onclick="document.calc.textview.value+='ans'">
+                </td>
+                <td><button><input type="button" class="bn" value="("
+                            onclick="document.calc.textview.value+='('"></button></td>
+                <td><button><input type="button" class="bn" value=")"
+                            onclick="document.calc.textview.value+=')'"></button></td>
+                <td><button><input type="button" class="bn" value="="
+                            onclick="document.calc.textview.value=eval(document.calc.textview.value);ans=eval(document.calc.textview.value)"></button>
+                </td>
+            </tr>
+        </table>
+</body>
+
+</html>
